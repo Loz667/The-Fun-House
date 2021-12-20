@@ -9,7 +9,6 @@ public class HookADuckController : MonoBehaviour
 
     [SerializeField] private Camera FPCam;
     [SerializeField] private float range = 100f;
-    //[HideInInspector] public bool hasHooked = false;
 
     void Update()
     {
@@ -30,18 +29,7 @@ public class HookADuckController : MonoBehaviour
             if (hit.collider.CompareTag("Duck"))
             {
                 Debug.Log("Hit " + hit.transform.name);
-                //hasHooked = true;
             }
         }
-        /*RaycastHit hit;
-
-        if (Physics.Raycast(FPCam.transform.position, FPCam.transform.forward, out hit, range))
-        {
-            Debug.Log("Hit " + hit.transform.name);
-
-            GameObject.Find("Game Manager").GetComponent<GameManager>().DuckWin();
-
-            hasHooked = true;
-        }*/
     }
 }
